@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "ls-s3-bucket"
+  bucket = "ls-test-bucket"
 }
 
 variable "region" {
