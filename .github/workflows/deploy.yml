@@ -1,0 +1,13 @@
+name: Deploy S3 Bucket
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-s3:
+    uses: SaranyaLogu132/workflow/.github/workflows/terraform-deploy.yml@main
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
